@@ -28,7 +28,7 @@ export default async function DashboardPage() {
       )
     `)
         .eq('user_id', user.id)
-        .order('updated_at', { ascending: false })
+        .order('created_at', { ascending: false })
 
     const totalBooks = userBooks?.length || 0
     const readingBooks = userBooks?.filter(b => b.status === 'reading').length || 0
